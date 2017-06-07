@@ -1,7 +1,7 @@
 
 *_=Kurulum ve çalıştırma adımları=_*
 
-1-) Github repo üzerinde bulunan dosyalar(websocket server haricinde); Red5 dosyaları içerisinde bulunan webapps klasörü içerisinde istenilen proje ismiyle
+1-) Github repo üzerinde bulunan dosyalar(WebSocket-Server haricinde); Red5 dosyaları içerisinde bulunan webapps klasörü içerisinde istenilen proje ismiyle
 klasör oluşturduktan sonra, oluşturulan klasör içine atılır.
 
 2-) Websocket server dosyaları sunucu makinası üzerinde istenilen herhangi bir dosya yoluna atılır.
