@@ -1,0 +1,32 @@
+
+=Kurulum ve çalıştırma adımları
+
+1-) Github repo üzerinde src içerisinde bulunan dosyalar klasör oluşturularak Red5 dosyaları içerisinde bulunan webapps klasörü
+içine atılır.
+
+2-) Websocket server dosyaları sunucu makinası üzerinde istenilen herhangi bir dosya yoluna atılır.
+
+3-) Eğer sanal makina üzerinde çalışıyorsa ağ bağdaştırıcısı "köprü bağdaştırıcı" tipinde ayarlanır.
+
+4-) İlgili websocket server klasörünün içerisine girildikten sonra , server.js scripti nodejs yardımımyla "node server.js"
+komutuyla çalıştırılır.
+
+5-) Makinanın dışarıya çıkış ip'si Terminal ekranına "ifconfig" komutu girilerek öğrenilir.
+
+6-) Red5 dosya yolu içerisinde webapps içerisine attığımız uygulamamızın "redt5-webrtc/src/main/webapp/" dosya yolunda bulunan
+index.html dosyası içerisindeki websocket url'si makinanın dışarıya çıkış ip'sine uyumlu olacak şekilde değiştirilir. Örneğin ;
+"var url = "ws://ip_adresi:8081/web-rtc-demo?username="+$user+"&room="+$room;"
+
+7-) Farklı bir terminal ekranı açılarak, tekrardan red5 dosyası içerisine girilip ./red5.sh komutuyla red5 sunucusu çalıştırılır.
+
+8-) Eğer JAVA_HOME dosya yolunu görmüyorsa "export JAVA_HOME=java_dosya_yolu" komutuyla jre dosya yolu belirtilir.
+
+9-) Bu adımlar başarıyla yapıldığında sunucu konfigürasyonu yapıllmış olacaktır. 
+Buradan sonra "http://ip_adresi:5080/web-rtc-demo/src/main/webapp/?user=user_name&room=room_name" şeklinde bir url ile 
+mozilla firefox tarayıcısı üzerinden odaya bağlantı sağlanır.
+
+10-) Mozilla firefox tarayıcısı üzerinden açılan pencerede gerekli kamera ve mikrofon(opsiyonel) izinleri verilir.
+
+11-) Eğer bir sorun yoksa alttaki textbox ekranında web socket bağlantısının başarıyla kurulduğu belirtilecektir. Buradan sonra 
+Create & Send offer butonuna tıklayarak istek yaratılır ve gönderilir. Red5 üzerinden sinyalleme sağlandıktan sonra google ice stun
+sunucusu üzerinden peer to peer bağlantı başlatılır. Görüntü ve ses aktarımı, bu bağlantı üzerinden gerçekleştirilir.
