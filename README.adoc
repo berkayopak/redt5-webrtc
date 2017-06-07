@@ -1,5 +1,5 @@
 
-=Kurulum ve çalıştırma adımları=
+*_=Kurulum ve çalıştırma adımları=_*
 
 1-) Github repo üzerinde src içerisinde bulunan dosyalar klasör oluşturularak Red5 dosyaları içerisinde bulunan webapps klasörü
 içine atılır.
