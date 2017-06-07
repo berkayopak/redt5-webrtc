@@ -1,12 +1,12 @@
 
 *_=Kurulum ve çalıştırma adımları=_*
 
-1-) Github repo üzerinde src içerisinde bulunan dosyalar klasör oluşturularak Red5 dosyaları içerisinde bulunan webapps klasörü
-içine atılır.
+1-) Github repo üzerinde bulunan dosyalar; Red5 dosyaları içerisinde bulunan webapps klasörü içerisinde istenilen proje ismiyle
+klasör oluşturduktan sonra, oluşturulan klasör içine atılır.
 
 2-) Websocket server dosyaları sunucu makinası üzerinde istenilen herhangi bir dosya yoluna atılır.
 
-3-) Eğer sanal makina üzerinde çalışıyorsa ağ bağdaştırıcısı "köprü bağdaştırıcı" tipinde ayarlanır.
+3-) Eğer sanal makina üzerinde çalışılıyorsa, ağ bağdaştırıcısı "köprü bağdaştırıcı" tipinde ayarlanır.
 
 4-) İlgili websocket server klasörünün içerisine girildikten sonra , server.js scripti nodejs yardımımyla "node server.js"
 komutuyla çalıştırılır.
