@@ -1,8 +1,13 @@
+Kocaeli Üniversitesi Bitirme Projesi
+------------------------------------
 
-*_=Kurulum ve çalıştırma adımları=_*
+Red5 Kurulumu
+~~~~~~~~~~~~~
+Proje Raporu içinde Red5 Linux Kurulumu başlığı altında bulunmaktadır.
 
-1-) Github repo üzerinde bulunan dosyalar(WebSocket-Server haricinde); Red5 dosyaları içerisinde bulunan webapps klasörü içerisinde istenilen proje ismiyle
-klasör oluşturduktan sonra, oluşturulan klasör içine atılır.
+Projenin İndirilmesi ve Çalıştırılması
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1-) Github repo üzerinde bulunan iki klasör ProjeMain ve web-rtc-demo Red5 dosyaları içerisinde bulunan webapps klasörü içerisinde istenilen proje ismiyle klasör oluşturduktan sonra, oluşturulan klasör içine atılır.(ProjeMain için deneme isimli bir klasör oluşturunuz.)
 
 2-) Websocket server dosyaları sunucu makinası üzerinde istenilen herhangi bir dosya yoluna atılır.
 
@@ -17,16 +22,85 @@ komutuyla çalıştırılır.
 index.html dosyası içerisindeki websocket url'si makinanın dışarıya çıkış ip'sine uyumlu olacak şekilde değiştirilir. Örneğin ;
 "var url = "ws://ip_adresi:8081/web-rtc-demo?username="+$user+"&room="+$room;"
 
-7-) Farklı bir terminal ekranı açılarak, tekrardan red5 dosyası içerisine girilip ./red5.sh komutuyla red5 sunucusu çalıştırılır.
+7-) 6.adımdaki yönlendirmeye benzer şekilde mevcut ip adresi /deneme içinde bulunan index.html, videoRecord.html ve videoStream.html dosyaları içersindeki ip adresleri tekrar güncellenmelidir.
+
+{sp}+
+index.html
+image:http://imgur.com/VwJ1uex.jpg[alt="index.html"]
+
+{sp}+
+videoRecord.html
+image:http://imgur.com/0Ex8dES.jpg[alt="index.html"]
+
+{sp}+
+videoStream.html
+image:http://imgur.com/82G4YyF.jpg[alt="index.html"]
+
+{sp}+
+Ve videoStream.html içindeki rtmp protol ip'sininde aynı şekilde ayarlanması gerekmektedir.
+image:http://imgur.com/hk4awey.jpg[alt="index.html"]
+
+{sp}+
+8-) Düzenleme işlemi bittikten sonra, farklı bir terminal ekranı açılarak, tekrardan red5 dosyası içerisine girilip ./red5.sh komutuyla red5 sunucusu çalıştırılır.
 
 8-) Eğer JAVA_HOME dosya yolunu görmüyorsa "export JAVA_HOME=java_dosya_yolu" komutuyla jre dosya yolu belirtilir.
 
-9-) Bu adımlar başarıyla yapıldığında sunucu konfigürasyonu yapıllmış olacaktır. 
-Buradan sonra "http://ip_adresi:5080/web-rtc-demo/src/main/webapp/?user=user_name&room=room_name" şeklinde bir url ile 
+9-) Bu adımlar başarıyla yapıldığında sunucu konfigürasyonu yapılmış olacaktır.
+Buradan sonra "http://ip_adresi:5080/deneme" urlsi ile < burada ip_adresi ayarlanmış ip adresi olacaktır >, uygulama Anasayfasına giriş yapılır.
+
+{sp}+
+Anasayfa Butonlar
+
+image:http://imgur.com/Knqqctt.jpg[alt="index.html"]
+
+Buradan seçilen butonlara göre Video Stream, Video Kayıt, WebRTC Konferans ekranlarına geçilir.
+
+
+Video Stream Sayfası
+--------------------
+
+1-) Burada önceden yüklenmiş Avengers2.mp4 video dosyası bir media player üzerinden gerekli controller butonları ile sayfada gösterilir.
+
+image:http://imgur.com/hk4awey.jpg[alt="index.html"]
+
+2-) Kullanıcı dilerse Anasayfaya geri dönebilir.
+
+image:http://imgur.com/rJA7IMD.jpg[alt="index.html"]
+
+
+Video Kayıt Sayfası
+-------------------
+
+1-) Burada bizden istenilen url kısmına sanal makinamızın güncellediğimiz ip adresi ile proje uzantısı girilerek bağlantı kurulur. ("rtmp://ip_adresi/deneme")
+
+2-) Eğer sarı yanan bağlantı simgesi yeşile döndüyse başarılı bir şekilde bağlantı kurulmuştur.
+
+image:http://imgur.com/YOTD8Sg.jpg[alt="index.html"]image:http://imgur.com/61qzEWk.jpg[alt="index.html"]
+
+
+3-) Daha sonra Start Recording butonuna basıldığında bizden kamera ve mikrofonumuza erişim sağlama sorulacaktır eğer erişim izni verirsek o andan itibaren video kaydı başlamış olur.
+
+4-) Stop Recording butonu ile video kaydını durdurduktan sonra kaydedilmiş video projemizin /streams dizininde bulunabilir.
+
+image:http://imgur.com/yO1T26K.jpg[alt="index.html"]
+
+
+WebRTC Konferans Sayfası
+------------------------
+
+1-)Burada yüklenen urlmize ekstradan parametreler ekleyerek oda ve kullanıcı adı oluşturulur "http://ip_adresi:5080/web-rtc-demo/src/main/webapp/?user=user_name&room=room_name" şeklinde bir url yapmamız gerekmektedir. Url yi yeniledikten sonra 
 mozilla firefox tarayıcısı üzerinden odaya bağlantı sağlanır.
 
-10-) Mozilla firefox tarayıcısı üzerinden açılan pencerede gerekli kamera ve mikrofon(opsiyonel) izinleri verilir.
+image:http://imgur.com/oCifgff.jpg[alt="index.html"]
 
-11-) Eğer bir sorun yoksa alttaki textbox ekranında web socket bağlantısının başarıyla kurulduğu belirtilecektir. Buradan sonra 
+2-) Mozilla firefox tarayıcısı üzerinden açılan pencerede gerekli kamera ve mikrofon(opsiyonel) izinleri verilir.
+
+image:http://imgur.com/WkKh2uw.jpg[alt="index.html"]
+
+3-) Eğer bir sorun yoksa alttaki textbox ekranında web socket bağlantısının başarıyla kurulduğu belirtilecektir. Buradan sonra 
 Create & Send offer butonuna tıklayarak istek yaratılır ve gönderilir. Red5 üzerinden sinyalleme sağlandıktan sonra google ice stun
 sunucusu üzerinden peer to peer bağlantı başlatılır. Görüntü ve ses aktarımı, bu bağlantı üzerinden gerçekleştirilir.
+
+image:http://imgur.com/QEXDLgs.jpg[alt="index.html"]
+
+4-) Kullanıcı dilerse Anasayfaya geri dönebilir.
