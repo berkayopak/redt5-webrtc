@@ -89,9 +89,9 @@ WebRTC Konferans Sayfası
 ------------------------
 
 1-)Burada yüklenen urlmize ekstradan parametreler ekleyerek oda ve kullanıcı adı oluşturulur "http://ip_adresi:5080/web-rtc-demo/src/main/webapp/?user=user_name&room=room_name" şeklinde bir url yapmamız gerekmektedir. Url yi yeniledikten sonra 
-mozilla firefox tarayıcısı üzerinden odaya bağlantı sağlanır.
+mozilla firefox tarayıcısı üzerinden odaya erişilir. Ardından aşağıdaki 4 kalite seçeneğinden biri seçilerek istenen kalitede bağlantı kurulur.
 
-image:http://imgur.com/oCifgff.jpg[alt="index.html"]
+image:http://i.imgur.com/tiXWLuV.png[alt="index.html"]
 
 2-) Mozilla firefox tarayıcısı üzerinden açılan pencerede gerekli kamera ve mikrofon(opsiyonel) izinleri verilir.
 
