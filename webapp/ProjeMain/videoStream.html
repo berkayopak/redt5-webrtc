@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="apple-touch-icon" href="logo.png" />
+<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<link rel="icon" type="image/png" href="favicon.png">
+<title>Red5 - videoStream</title>
+<style type="text/css">
+<!--
+body {
+    background-color:#200000;
+    font-family: sans-serif;
+    font-size: 0.9em;
+}
+.code {
+    font-family: monospace;
+    font-size: 130%;
+}
+
+
+  -->
+</style>
+
+</head>
+
+<body>
+<script type='text/javascript' src='jwplayer.js'></script>
+<center>
+
+<!--
+<p>Stream yapılacak medyayı yazınız.</p>
+
+
+
+<script>
+
+  function textal(){
+   // var dosya_adi = $('textarea#dosya_adi').val();
+
+ var dosya_adi = document.getElementById("textalani").value;
+
+  document.getElementById("textalani2").value = dosya_adi + " medyası yüklendi.";
+  
+  }
+
+</script>
+
+
+<textarea id="textalani" cols="60" rows="1">1</textarea>
+<br></br>
+<textarea id="textalani2" cols="60" rows="1">2</textarea>
+<br></br>
+<button type="button" onclick="textal()"> Video Yükle</button>
+-->
+
+<div id='mediaspace'>media alanı</div>
+<script type='text/javascript'>
+  jwplayer('mediaspace').setup({
+    'flashplayer': 'player.swf',
+    'file': 'Avengers2.mp4',
+    'streamer': 'rtmp://192.168.1.106/deneme',
+    'controlbar': 'bottom',
+    'width': '840',
+    'height': '600'
+  });
+</script>
+
+</center>
+
+<center>
+<br></br>
+ <button class="btn btn-success" onclick="location.href='http://192.168.1.106:5080/deneme';"> Anasayfa</button>
+</center>>
+</body>
+
+</html>
